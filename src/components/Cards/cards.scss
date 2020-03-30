@@ -1,0 +1,93 @@
+@import 'src/styles/_vars.scss';
+
+.game-cards {
+  flex-basis: 85%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  margin-bottom: 2rem;
+  height: auto;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    background-color: black;
+    border: 4px solid $clearColor;
+    width: .8rem;
+    height: .8rem; 
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $primaryColor;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  height: max-content;
+  border: 4px solid black;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  padding: .5rem;
+
+  &__img {
+    width: 60%;
+    height: auto;
+  }
+
+  &__text {
+    font-size: 1.1em;
+    text-align: center;
+    padding: .5rem;
+  }
+}
+
+.scroll-btn {
+  display: none;
+}
+
+@media (max-width: 1002px) {
+  .game-cards {
+    overflow-y: inherit;
+  }
+
+  .card {
+    margin: 0 auto 1.5rem auto;
+    width: 45%;
+  }
+
+  /* Scroll back to top */
+  .scroll-btn {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    width: 60px;
+    height: 50px;
+    background-color: $primaryColor;
+    border: inset 4px solid $textColor;
+    box-shadow: inset -3px -3px 3px 3px rgba(#fff, .2);
+    transition: all 0.3s ease;
+  }
+  .scroll-btn:hover {
+    bottom: 25px;
+  }
+  .scroll-btn > span {
+    display: block;
+    color: $clearColor;
+    transform: rotateZ(90deg);
+  }
+}
+
+@media (max-width: 530px) {
+  .card {
+    width: 100%;
+  }
+}
+
+

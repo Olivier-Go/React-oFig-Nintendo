@@ -1,0 +1,14 @@
+@import 'reset';
+@import 'nes';
+@import 'vars';
+
+@font-face {
+  font-family: 'Press Start 2P, cursive';
+  src: url('../assets/fonts/PressStart2P-Regular.ttf');
+}
+
+body {
+  font-family: 'Press Start 2P, cursive', sans-serif;
+  background-color: $primaryColor;
+  color: $textColor;
+}

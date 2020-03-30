@@ -1,0 +1,43 @@
+@import 'src/styles/_vars.scss';
+
+.nes-container {
+  background-color: $clearColor;
+  margin: 1rem;
+  height: 96vh;
+  padding-left: .5rem;
+  padding-right: 1rem;
+}
+
+main {
+  letter-spacing: .03em;
+  display: flex;
+  flex-flow: row nowrap;
+  padding-top: 1rem;
+  height: 85%;
+}
+
+@media (min-width: 1080px) {
+  .nes-container {
+    max-width: 1045px;
+    margin: 1rem auto;
+  }
+}
+
+@media (max-width: 1002px) {
+  .nes-container {
+    padding: .5em;
+    height: 100%;
+  }
+
+  main {
+    flex-direction: column;
+    height: auto;
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 530px) {
+  .nes-container {
+    margin: .8rem;
+  }
+}

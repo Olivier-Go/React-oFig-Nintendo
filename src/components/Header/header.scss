@@ -1,0 +1,45 @@
+@import 'src/styles/_vars.scss';
+
+header {
+  text-align: center;
+
+  & > p {
+    font-size: 1.2em;
+    font-weight: 500;
+  }
+
+  & > input {
+    display: inline-block;
+    font-size: .8em;
+    width: auto;
+    padding: 1rem 2rem;
+    text-align: center;
+    border: 4px solid $primaryColor;
+  }
+}
+
+.title {
+  & > h1 {
+    display: inline-block;
+    color: $primaryColor;
+    font-size: 1.8em;
+    padding-bottom: .6rem;
+    padding-left: 1rem;
+  }
+}
+
+
+@media (max-width: 1002px) {
+  .title {
+    & > h1 {
+      font-size: 1.2em;
+      padding-top: .5em;
+    }
+  }
+}
+
+@media (max-width: 530px) {
+  header > input {
+    max-width: 100%;
+  }
+}

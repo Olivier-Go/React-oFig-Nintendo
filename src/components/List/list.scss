@@ -1,0 +1,64 @@
+@import 'src/styles/_vars.scss';
+
+.game-list {
+  flex-basis: 30%;
+  font-size: .8em;
+  margin-bottom: 2rem;
+  height: auto;
+  overflow: auto;
+  scroll-behavior: smooth;
+  text-align: left;
+  padding: .2rem;
+
+  &::-webkit-scrollbar {
+    background-color: black;
+    border: 4px solid $clearColor;
+    width: .8rem;
+    height: .8rem; 
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $primaryColor;
+  }
+
+  & li {
+    display: inline-block;
+    width: 100%;
+    padding: .6rem;
+    transition: background-color 0.3s;
+
+    &::before {
+      top: 8px;
+      left: -2px;
+      content: "\200B";
+      width: 2px;
+      height: 2px;
+      color: #212529;
+    }
+
+    &:hover {
+      background-color: $primaryColor;
+      color: $clearColor;
+      transition: background-color 0.1s;
+    }
+  }
+}
+
+@media (max-width: 1002px) {
+  .game-list {
+    flex-basis: initial;
+    margin: 2rem auto 1.5rem auto;
+    width: 70%;
+    margin-bottom: 1rem;
+    max-height: 20rem;
+  }
+}
+
+@media (max-width: 530px) {
+  .game-list {
+    flex-basis: initial;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+}
