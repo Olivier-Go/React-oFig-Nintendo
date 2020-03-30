@@ -10,7 +10,6 @@ import {
 } from 'src/actions/oFigActions';
 
 const dataMiddleware = (store) => (next) => (action) => {
-  console.log(host);
   switch (action.type) {
     case GET_GAMES_DATA:
       axios.get(`${host}/games`)
